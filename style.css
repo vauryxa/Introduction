@@ -1,0 +1,137 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  overflow-y: auto; /* Allow scrolling */
+  color: #ffffff; /* Set default text color to white */
+}
+
+/* Background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://wallpaperaccess.com/full/3972620.jpg'); /* Add your background image URL here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  animation: zoomIn 1.5s ease forwards; /* Reintroduced zoom-in effect */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim the background with a dark transparent overlay */
+  z-index: -1;
+}
+
+/* Card */
+.card {
+  position: relative;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* About Me */
+.about-me p {
+  font-size: 1rem;
+  color: #cccccc; /* Lighter color for text */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Extra Information */
+.extra-info p {
+  font-size: 1rem;
+  color: #cccccc; /* Lighter color for text */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Communication */
+.comms p {
+  font-size: 1rem;
+  color: #cccccc; /* Lighter color for text */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Contact */
+.cways p {
+  font-size: 1rem;
+  color: #cccccc; /* Lighter color for text */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Links Section */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.link-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.link-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.1);
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
