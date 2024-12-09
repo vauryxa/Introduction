@@ -4,51 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Astrowave</title>
-    <link rel="stylesheet" href="style.css"> <!-- Ensure the CSS file path is correct -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="background">
-        <div class="overlay"></div> <!-- Added overlay for dimming -->
+        <div class="overlay"></div>
     </div>
-    <div class="card">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>Astrowave</h1>
-            <img src="https://cdn.discordapp.com/avatars/1288119549551710289/35e784c9ac814997d7c2d4584747786f.png?size=4096" alt="Profile Picture" class="profile-pic">
-        </div>
-        
-        <!-- About Me Section -->
-        <div class="about-me">
-            <p>Hi, I'm Astrowave, I'm a 13 year old from Bangladesh who's working things out. I have a big love for coding. I understand coding languages such as CSS, HTML, JS, and Python. I also enjoy games such as Minecraft, Fortnite, and Valorant.</p>
-        </div>
 
-        <!-- Extra Information Section -->
-        <div class="extra-info">
-            <h1>Extra Information</h1>
-            <p>As for height, I'm standing at 5'3". I'm a straight male. My birthday is 28th of January. And I am single (looking).</p>
-        </div>
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button onclick="showSection('about-me')">About Me</button>
+        <button onclick="showSection('extra-info')">Extra Information</button>
+        <button onclick="showSection('comms')">Communication</button>
+        <button onclick="showSection('cways')">Contact</button>
+    </div>
 
-        <!-- Communication Section -->
-        <div class="comms">
-            <h1>Communication</h1>
-            <p>I'm happy to talk, yet I'm really bad at handling certain situations, so please be aware of such while communicating or venting.</p>
-        </div>
+    <!-- About Me Section -->
+    <div id="about-me" class="card active">
+        <img src="https://cdn.discordapp.com/avatars/1288119549551710289/35e784c9ac814997d7c2d4584747786f.png?size=4096" alt="Profile Picture" class="profile-pic">
+        <h1>Astrowave</h1>
+        <p>Hi, I'm Astrowave, I'm a 13 year old male from Bangladesh who's working things out. I am currently standing at 5'3. I am straight and taken by the most beautiful person ever. (ily lim) My brithday is 28th January 2011.</p>
+    </div>
 
-        <!-- Contact Section -->
-        <div class="cways">
-            <h1>Contact me</h1>
-            <p>Contact me via Discord since I am not uncomfortable doing so in any other ways.</p>
-        </div>
+    <!-- Extra Information Section -->
+    <div id="extra-info" class="card">
+        <h1>Extra Information</h1>
+        <p>I am passionate about coding. I understand multiple coding languages ranging from JavaScript to Python, yet don't call me an expert. I love games such as minecraft, fortnite and valorant. I'm a tea addict.</p>
+    </div>
 
-        <!-- Links Section -->
-        <div class="links">
-            <a href="https://github.com/Astrowave69" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="link-icon">
-            </a>
-            <a href="https://discord.gg/CnSJw6fC" target="_blank">
-                <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg" alt="Discord" class="link-icon">
-            </a>
+    <!-- Communication Section -->
+    <div id="comms" class="card">
+        <h1>Communication</h1>
+        <p>I'm open to talking! I like to yap too much. I tend to be clumsy at times. Also I prefer to keep myself disguised to the ones I am not open to. so don't press me.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="cways" class="card">
+        <h1>Contact me</h1>
+        <p>Contact me via Discord since I am not uncomfortable doing so in any other ways. Do not ask me to help you with python code, I'm still learning.</p>
+    </div>
+
+    <!-- GitHub Button -->
+    <button class="github-button">Visit My GitHub</button>
+
+    <!-- GitHub Modal -->
+    <div class="github-modal" id="githubModal">
+        <!-- GitHub Profile Picture -->
+        <img src="https://avatars.githubusercontent.com/u/189519997?v=4" alt="GitHub Profile Picture">
+
+        <!-- GitHub Profile Button -->
+        <button class="github-btn" onclick="window.open('https://github.com/AstroWave69', '_blank')">
+            Visit My GitHub Profile
+        </button>
+
+        <!-- Repository Images -->
+        <div class="repo-images">
+            <img src="https://media.discordapp.net/attachments/1288512918757048455/1315578649566515200/COLOURBOX37991668.png?ex=6757eb98&is=67569a18&hm=86be4bc87d7241ac6222aee1e962e9cd36334b83a3934e5bdd84c4f61a8b662e&=&format=webp&quality=lossless&width=411&height=411" alt="Repo 1" onclick="window.open('https://github.com/AstroWave69/ChannelSplitter', '_blank')">
+            <img src="https://media.discordapp.net/attachments/1288512918757048455/1315578861051707402/folder-invoices.png?ex=6757ebca&is=67569a4a&hm=b9b95c9c32427ffea8b73fd2ef9aa60c90dac36a5bf4976ef87a5a07cfb2935e&=&format=webp&quality=lossless&width=411&height=411" alt="Repo 2" onclick="window.open('https://github.com/AstroWave69/TempFlick', '_blank')">
         </div>
     </div>
+
+    <script src="renderer.js"></script>
 </body>
 </html>
