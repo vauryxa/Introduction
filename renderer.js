@@ -1,50 +1,33 @@
-function showSection(sectionId) {
-  // Get all sections (cards)
-  const sections = document.querySelectorAll('.card');
+document.getElementById('lim').addEventListener('click', function(event) {
+  const body = document.body;
 
-  // Loop through each section
-  sections.forEach(section => {
-      if (section.id === sectionId) {
-          // Activate the selected section with animation
-          section.classList.add('active');
-      } else {
-          // Deactivate other sections with animation
-          section.classList.remove('active');
-      }
-  });
-}
+  // Create heart elements
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
 
-// GitHub Button and Modal Logic
-const githubButton = document.querySelector('.github-button');
-const githubModal = document.getElementById('githubModal');
-const backBtn = document.createElement('button'); // Create a back button for modal
-backBtn.classList.add('back-btn');
-backBtn.textContent = 'Back'; // Set the text of the button
+    // Set a random position for each heart
+    heart.style.left = `${Math.random() * window.innerWidth}px`;
+    heart.style.top = `${Math.random() * window.innerHeight}px`;
 
-// Add the back button to the GitHub modal
-githubModal.appendChild(backBtn);
+    // Append heart to the body
+    body.appendChild(heart);
 
-// Open the GitHub Modal when the button is clicked
-githubButton.addEventListener('click', function() {
-  githubModal.classList.add('active');
-});
-
-// Close the GitHub Modal when clicking outside of it
-githubModal.addEventListener('click', function(e) {
-  if (e.target === githubModal || e.target === backBtn) {
-    githubModal.classList.remove('active');
+    // Remove the heart after the animation completes (2s duration)
+    setTimeout(() => {
+      heart.remove();
+    }, 2000);
   }
 });
 
-// Close the modal when the back button is clicked
-backBtn.addEventListener('click', function() {
-  githubModal.classList.remove('active');
-});
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.card');
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
 
-// Add functionality to the NGL button
-const nglButton = document.querySelector('.ngl-button');
-
-// Redirect to another website when the NGL button is clicked
-nglButton.addEventListener('click', function() {
-    window.open('https://ngl.link/astrowave.69', '_blank'); 
-});
+  const activeSection = document.getElementById(sectionId);
+  if (activeSection) {
+    activeSection.classList.add('active');
+  }
+}
