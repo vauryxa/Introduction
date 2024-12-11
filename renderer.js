@@ -1,17 +1,17 @@
 function showSection(sectionId) {
-    // Get all sections (cards)
-    const sections = document.querySelectorAll('.card');
+  // Get all sections (cards)
+  const sections = document.querySelectorAll('.card');
 
-    // Loop through each section
-    sections.forEach(section => {
-        if (section.id === sectionId) {
-            // Activate the selected section with animation
-            section.classList.add('active');
-        } else {
-            // Deactivate other sections with animation
-            section.classList.remove('active');
-        }
-    });
+  // Loop through each section
+  sections.forEach(section => {
+      if (section.id === sectionId) {
+          // Activate the selected section with animation
+          section.classList.add('active');
+      } else {
+          // Deactivate other sections with animation
+          section.classList.remove('active');
+      }
+  });
 }
 
 // GitHub Button and Modal Logic
@@ -39,4 +39,12 @@ githubModal.addEventListener('click', function(e) {
 // Close the modal when the back button is clicked
 backBtn.addEventListener('click', function() {
   githubModal.classList.remove('active');
+});
+
+// Add functionality to the NGL button
+const nglButton = document.querySelector('.ngl-button');
+
+// Redirect to another website when the NGL button is clicked
+nglButton.addEventListener('click', function() {
+    window.open('https://ngl.link/astrowave.69', '_blank'); 
 });
