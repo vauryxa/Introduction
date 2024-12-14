@@ -1,13 +1,13 @@
 // Function to switch sections (cards)
 function showSection(sectionId) {
-  const sections = document.querySelectorAll('.card');
-  sections.forEach((section) => {
-    if (section.id === sectionId) {
-      section.classList.add('active');
-    } else {
-      section.classList.remove('active');
-    }
-  });
+    const sections = document.querySelectorAll('.card');
+    sections.forEach((section) => {
+      if (section.id === sectionId) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
 }
 
 // GitHub Button Functionality
@@ -57,4 +57,24 @@ limElement.addEventListener('click', (event) => {
     clearInterval(interval);
     setTimeout(() => container.remove(), 2000); // Give time for remaining hearts to fade
   }, 5000); // Keep raining hearts for 5 seconds
+});
+
+// Heart Explosion Animation
+document.getElementById('heart-link').addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  // Create a heart element
+  const heart = document.createElement('span');
+  heart.innerHTML = '❤️';
+  
+  // Add heart explosion animation class
+  heart.classList.add('heart-animation');
+  
+  // Append the heart to the body
+  document.body.appendChild(heart);
+  
+  // Remove the heart after animation completes (3 seconds)
+  setTimeout(() => {
+    heart.remove();
+  }, 3000);
 });
