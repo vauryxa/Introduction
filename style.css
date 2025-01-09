@@ -1,1 +1,275 @@
+body {
+    font-family: 'Jersey 15', sans-serif; /* Apply imported font */
+    background-color: #999999;
+    margin: 0;
+    padding: 0;
+}
 
+.box {
+    width:140vh;
+    height: 75vh;
+    padding: 5vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e0f7fa; /* Light blue hint */
+    text-align: center;
+    box-shadow: 0 0 10px 5px rgba(0, 162, 255, 0.3); /* Blue glow */
+    border: 2px solid rgba(0, 162, 255, 0.493); /* Blue border */
+}
+
+.box img {
+    position: absolute;
+    top: calc(10vh + 20px); /* Position below .inner-box */
+    left: 15px; /* Adjust as needed */
+    max-width: 180px; /* Larger width */
+    max-height: 180px; /* Larger height */
+    user-select: none; /* Disable image selection */
+    -webkit-user-select: none; /* Disable image selection for Safari */
+    -moz-user-select: none; /* Disable image selection for Firefox */
+    -ms-user-select: none; /* Disable image selection for Internet Explorer/Edge */
+    transition: border-radius 0.3s ease; /* Smooth transition */
+}
+
+.box img:hover {
+    border-radius: 40px; /* Shift to 10px corner radius on hover */
+}
+
+.inner-box {
+    width: calc(100% + 2px); /* One more pixel larger in width */
+    height: calc(10vh + 1px); /* One pixel larger in height */
+    background-color: rgba(0, 162, 255, 0.493); /* Same color as .box border */
+    margin: auto;
+    position: absolute;
+    top: -2px;
+    left: -2px; /* Shift one pixel to the left */
+    right: 0;
+    border: 2px solid rgba(0, 162, 255, 0.6); /* Slightly darker border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-box p {
+    font-size: 2em; /* Medium size */
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* White glow */
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for Safari */
+    -moz-user-select: none; /* Disable text selection for Firefox */
+    -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
+}
+
+.text-above-image p {
+    position: absolute;
+    top: calc(10vh + 30px); /* Adjust as needed */
+    left: 15px; /* Align with the image */
+    font-size: 1.5em; /* Medium size */
+    color: black; /* Dark color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* White glow */
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for Safari */
+    -moz-user-select: none; /* Disable text selection for Firefox */
+    -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
+}
+
+.text-right-of-image {
+    position: absolute;
+    left: calc(15px + 180px + 20px); /* Shift more to the right */
+    font-size: 1.5em; /* Medium size */
+    color: black; /* Dark color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dark glow */
+    font-style: italic; /* Italicize text */
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for Safari */
+    -moz-user-select: none; /* Disable text selection for Firefox */
+    -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.text-right-of-image:hover {
+    transform: scale(1.1); /* Expand on hover */
+}
+
+.text-right-of-image:nth-of-type(1) {
+    top: calc(10vh + 20px); /* First text */
+}
+
+.text-right-of-image:nth-of-type(2) {
+    top: calc(10vh + 60px); /* Second text */
+}
+
+.text-right-of-image:nth-of-type(3) {
+    top: calc(10vh + 100px); /* Third text */
+}
+
+.text-right-of-image:nth-of-type(4) {
+    top: calc(10vh + 140px); /* Fourth text */
+}
+
+.unselectable {
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for Safari */
+    -moz-user-select: none; /* Disable text selection for Firefox */
+    -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
+}
+
+.creditstext {
+    color: rgba(255, 255, 255, 0.267);
+    margin: 0vh 1vh;
+    position: absolute;
+}
+
+.dropdown {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: rgba(0, 162, 255, 0.493); /* Same color as .inner-box */
+    border: 2px solid rgba(0, 162, 255, 0.6); /* Same border color as .inner-box */
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 162, 255, 0.493); /* Same color as .inner-box */
+    border: 2px solid rgba(0, 162, 255, 0.6); /* Same border color as .inner-box */
+    border-radius: 5px;
+    padding: 10px;
+    top: 100%; /* Position below the dropdown button */
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    color: black; /* Text color */
+    font-family: 'Jersey 15', sans-serif; /* Same font as the entire website */
+    font-size: 1em; /* Adjust font size as needed */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px; /* Add padding */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Full width */
+}
+
+.dropdown-content button:hover {
+    background-color: rgba(0, 162, 255, 0.2); /* Light blue background on hover */
+}
+
+.box .extrainfo {
+    position: absolute;
+    top: calc(45% - 70px); /* Move 10px higher */
+    left: 75%; /* Position to the right center of .box */
+    transform: translate(-50%, -50%);
+    width: 70vh;
+    background-color: rgba(0, 162, 255, 0.493); /* Same color as .box border */
+    border: 2px solid rgba(0, 162, 255, 0.6); /* Slightly darker border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .extrainfo .topbar {
+    width: 100%;
+    height: 4vh;
+    background-color: rgba(0, 162, 255, 0.493); /* Same color as .box border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgba(0, 162, 255, 0.6); /* Slightly darker border */
+}
+
+.box .extrainfo .topbar p {
+    font-size: 1.2em; /* Medium size */
+    color: black;
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for Safari */
+    -moz-user-select: none; /* Disable text selection for Firefox */
+    -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
+    font-style: italic;
+}
+
+.box .extrainfo .infobox {
+    color: grey;
+    width: 100%;
+    height: 15vh;
+    margin-top: 0; /* Remove margin to stick to .topbar */
+    background-color: white; /* Set background color to white */
+    display: flex;
+    flex-direction: column; /* Stack the text vertically */
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 2px solid rgb(53, 53, 53);
+    gap: 0; /* Remove gap between texts */
+}
+
+.box .extrainfo .infobox p {
+    margin: 0; /* Remove margins */
+    padding: 0.5vh 2vh; /* Add padding for spacing */
+    font-size: 1.2em; /* Medium size */
+    color: black;
+}
+
+.box .likes {
+    position: absolute;
+    top: calc(45% + 25vh - 20px); /* Move 10px higher */
+    left: 75%; /* Position to the right center of .box */
+    transform: translate(-50%, -50%);
+    width: 70vh;
+    background-color: rgba(0, 162, 255, 0.493); /* Same color as .box border */
+    border: 2px solid rgba(0, 162, 255, 0.6); /* Slightly darker border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .likes .topbar {
+    width: 100%;
+    height: 4vh;
+    background-color: rgba(0, 162, 255, 0.493); /* Same color as .box border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgba(0, 162, 255, 0.6); /* Slightly darker border */
+}
+
+.box .likes .topbar p {
+    font-size: 1.2em; /* Medium size */
+    color: black;
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for Safari */
+    -moz-user-select: none; /* Disable text selection for Firefox */
+    -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
+    font-style: italic;
+}
+
+.box .likes .infobox {
+    color: grey;
+    width: 100%;
+    height: 37vh;
+    margin-top: 0; /* Remove margin to stick to .topbar */
+    background-color: white; /* Set background color to white */
+    display: flex;
+    flex-direction: column; /* Stack the text vertically */
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 2px solid rgb(53, 53, 53);
+    gap: 0; /* Remove gap between texts */
+}
+
+.box .likes .infobox p {
+    margin: 0; /* Remove margins */
+    padding: 0.5vh 2vh; /* Add padding for spacing */
+    font-size: 1.2em; /* Medium size */
+    color: black;
+}
