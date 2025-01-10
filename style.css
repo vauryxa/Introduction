@@ -3,6 +3,18 @@ body {
     background-color: #999999;
     margin: 0;
     padding: 0;
+    background-image: url('https://media.discordapp.net/attachments/1307354900858142750/1327148340089065512/c53810c5379c97439da36b47752bc2e1_1.jpg?ex=678202b5&is=6780b135&hm=eb4a19e15c123b5cf9e5f2cc426241a11bd1be07346b9c1df8c14a79ab807f45&=&format=webp&width=234&height=417'); /* Background image URL */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+* {
+    cursor: url('cursor.cur'), auto; /* Custom cursor with hotspot coordinates */
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Disable text selection for Safari */
+    -moz-user-select: none; /* Disable text selection for Firefox */
+    -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
 }
 
 .box {
