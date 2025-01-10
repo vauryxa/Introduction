@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heyyyyya !!!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://media.discordapp.net/attachments/1326883515932999681/1326884107212558377/websiteicon.png?ex=67810c9f&is=677fbb1f&hm=9384e7bc4c7fc569541985067f7a252bbfd3744d7fe9777d419b252ee7212e8b&=&format=webp&quality=lossless" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
     </style>
 </head>
 <body>
+    <audio id="hover-sound" src="tick.mp3"></audio> <!-- Add your sound file here -->
     <div class="creditstext">
         <p>This website is entirely designed and developed by me</p>
     </div>
@@ -22,7 +23,12 @@
             <div class="infobox">
                 <p>Cats</p>
                 <p>Marvel movies</p>
-                <p>I'll add more later lol</p>
+                <p>Color purple or blue (or shades of them)</p>
+                <p>minecraft</p>
+                <p>science fiction/robotics</p>
+                <p>technology and nerdy stuff</p>
+                <p>music (i like boywithuke and some dark music, not emo)</p>
+                <p>and i love my gf 😋</p>
             </div>
         </div>
         <div class="extrainfo">
@@ -39,7 +45,7 @@
             <p class="unselectable">Vortex's Void !!</p>
         </div>
         <p class="text-above-image unselectable">Welcome !!</p>
-        <img src="https://media.discordapp.net/attachments/1307354900858142750/1326856172728356865/poor_child.jpg?ex=6780f29b&is=677fa11b&hm=8191475d0c87b5c27e44d19e09419503ea80dfc34e6416bd7fdb89efabd0813c&=&format=webp&width=426&height=417" alt="Image Description">
+        <img src="https://media.discordapp.net/attachments/1307354900858142750/1326856172728356865/poor_child.jpg?ex=6780f29b&is=677fa11b&hm=8191475d0c87b5c27e44d19e09419503ea80dfc34e6416bd7fdb89efabd0813c&=&format=webp&width=426&height=417" alt="Image Description" draggable="false">
         <p class="text-right-of-image unselectable">Age : 13</p>
         <p class="text-right-of-image unselectable">Gender : Male</p>
         <p class="text-right-of-image unselectable">Sexuality : Straight</p>
@@ -53,5 +59,12 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.text-right-of-image').forEach(element => {
+            element.addEventListener('mouseover', () => {
+                document.getElementById('hover-sound').play();
+            });
+        });
+    </script>
 </body>
 </html>
