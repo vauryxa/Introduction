@@ -3,7 +3,7 @@ body {
     background-color: #999999;
     margin: 0;
     padding: 0;
-    background-image: url('https://media.discordapp.net/attachments/1307354900858142750/1327148340089065512/c53810c5379c97439da36b47752bc2e1_1.jpg?ex=678202b5&is=6780b135&hm=eb4a19e15c123b5cf9e5f2cc426241a11bd1be07346b9c1df8c14a79ab807f45&=&format=webp&width=234&height=417'); /* Background image URL */
+    background-image: url('https://github.com/Astrowave69/Introduction/blob/main/background.png?raw=true'); /* Background image URL */
     background-size: cover; /* Cover the entire body */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -15,6 +15,17 @@ body {
     -webkit-user-select: none; /* Disable text selection for Safari */
     -moz-user-select: none; /* Disable text selection for Firefox */
     -ms-user-select: none; /* Disable text selection for Internet Explorer/Edge */
+}
+
+.spotify-embed {
+    width: 60vh;
+    height: 150px; /* Adjust height as needed */
+    background-color: black;
+    position: absolute;
+    top: calc(10vh + 250px); /* Adjust position as needed */
+    left: 20px; /* Adjust position as needed */
+    border-radius: 15px;
+    overflow: hidden; /* Ensure content does not overflow */
 }
 
 .box {
@@ -128,7 +139,7 @@ body {
 }
 
 .creditstext {
-    color: rgba(255, 255, 255, 0.267);
+    color: rgba(0, 0, 0, 0.267);
     margin: 0vh 1vh;
     position: absolute;
 }
